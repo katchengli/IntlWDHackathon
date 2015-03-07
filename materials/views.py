@@ -1,14 +1,13 @@
 from django.shortcuts import render
-from django.shortcuts import render
-from materials.models import Material
+from materials.models import Material, Unit
 
-#def materials(request):
-	#return render(request, 'materials/materials.html', {'materials': materials})
-
+# class UnitForm(ModelForm):
+	# class Meta:
+	# model = Unit
+	# fields = ['name']
 
 def index(request):
-	materials = Material.objects.order_by('name')
-	return render(request, 'materials/index.html', {'materials': materials})
-
+	unit = Unit.objects.all()
+	return render(request, 'materials/index.html', {'unit': unit})
 
 	
