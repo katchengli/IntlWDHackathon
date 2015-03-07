@@ -1,1 +1,1 @@
-web: gunicorn IntlWDHackathon.wsgi --log-file -
+web: gunicorn DIYCalc.wsgi --log-file -
