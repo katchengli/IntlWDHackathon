@@ -1,0 +1,13 @@
+[
+  {
+    "model": "Material",
+    "pk": 1,
+    "fields": {
+      "name": "Test",
+      "date_entered": "12/02/15",
+	  "unit": "1",
+      "price": "12.00",
+	  "quantity": "1"
+    }
+  }
+]

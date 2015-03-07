@@ -11,11 +11,23 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
+            name='Category',
+            fields=[
+                ('id', models.AutoField(auto_created=True, serialize=False, verbose_name='ID', primary_key=True)),
+                ('category', models.CharField(default='No Category', max_length=200)),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
             name='Material',
             fields=[
-                ('id', models.AutoField(serialize=False, primary_key=True, auto_created=True, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True, serialize=False, verbose_name='ID', primary_key=True)),
                 ('name', models.CharField(max_length=200)),
-                ('date_entered', models.DateTimeField(verbose_name='Date Entered')),
+                ('date_entered', models.DateTimeField(auto_now_add=True, verbose_name='Date Entered')),
+                ('price', models.DecimalField(decimal_places=2, max_digits=6)),
+                ('quantity', models.DecimalField(decimal_places=2, max_digits=6)),
             ],
             options={
             },
@@ -24,7 +36,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Unit',
             fields=[
-                ('id', models.AutoField(serialize=False, primary_key=True, auto_created=True, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True, serialize=False, verbose_name='ID', primary_key=True)),
                 ('unit', models.CharField(max_length=200)),
             ],
             options={
