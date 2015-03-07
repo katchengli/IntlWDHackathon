@@ -1,0 +1,1 @@
+web: gunicorn IntlWDHackathon.wsgi --log-file -
