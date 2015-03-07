@@ -55,3 +55,6 @@ target/
 
 # Database
 *.sqlite3
+
+# Database Settings
+DIYCalc/settings.py
