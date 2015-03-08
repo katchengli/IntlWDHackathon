@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'materials',
     'home',
     'products',
+    'jquery',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -65,6 +66,9 @@ WSGI_APPLICATION = 'DIYCalc.wsgi.application'
        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
    # }
 # }
+
+# STATIC_ROOT = 'C:/Users/Katherine/Documents/IntlWDHackathon/IntlWDHackathon/DIYCalc/static/'
+# STATIC_URL= '/static'
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
