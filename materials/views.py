@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from materials.models import Material, Unit
+from materials.models import Material, Unit, UnitForm
+from django.http import HttpResponseRedirect
 
 # class UnitForm(ModelForm):
 	# class Meta:
@@ -8,6 +9,22 @@ from materials.models import Material, Unit
 
 def index(request):
 	unit = Unit.objects.all()
-	return render(request, 'materials/index.html', {'unit': unit})
+	material = Material.objects.all()
+	return render(request, 'materials/index.html', {'material': material, 'unit': unit})
+	#return render(request, 'materials/index.html', {'unit': unit})
 
-	
+def new(request):
+# if this is a POST request we need to process the form data
+	if request.method == 'POST':
+	# create a form instance and populate it with data from the request:
+		form = UnitForm(request.POST)
+		# check whether it's valid:
+		if form.is_valid():
+		# process the data in form.cleaned_data as required
+		# ...
+		# redirect to a new URL:
+			return HttpResponseRedirect('/materials/')
+			# if a GET (or any other method) we'll create a blank form
+	else:
+		form = UnitForm()
+	return render(request, 'materials/new.html', {'form': form})

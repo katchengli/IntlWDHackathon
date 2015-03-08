@@ -1,4 +1,6 @@
 from django.db import models
+from django import forms
+
 
 
 class Material(models.Model):
@@ -12,7 +14,10 @@ class Material(models.Model):
 class Unit(models.Model):
 	unit=models.CharField(max_length=200)
 
-
 class Category(models.Model):
 	category=models.CharField(max_length=200, default='No Category')
+
+class UnitForm(forms.Form):
+	unit = forms.CharField(label='Unit name', max_length=200)
+	
 	
