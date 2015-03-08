@@ -1,8 +1,6 @@
 from django.db import models
 from django import forms
 
-
-
 class Material(models.Model):
 	name=models.CharField(max_length=200)
 	date_entered=models.DateTimeField('Date Entered', auto_now_add=True)
