@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from materials.models import Material
+from management.models import Unit
 from django.http import HttpResponseRedirect
 
     # class UnitForm(ModelForm):
@@ -8,14 +8,10 @@ from django.http import HttpResponseRedirect
     # fields = ['name']
 
 def index(request):
-    # unit = Unit.objects.all()
-    material = Material.objects.all()
+    unit = Unit.objects.all()
     
-    print("@@@@@@@@@@@@@@@@@@@@@@@@")
-    for m in material:
-        print(m)
     
-    return render(request, 'materials/index.html', {'materials': material})
+    return render(request, 'management/index.html', {'units': unit})
     #return render(request, 'materials/index.html', {'unit': unit})
 
 # def new(request):

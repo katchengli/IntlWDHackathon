@@ -2,14 +2,9 @@
 
 {% for material in materials %}
 	<span>Name:{{ material.name }}</span>
-
-	<span>Unit:{{ material.unit.unit }}</span>
+	<span>Unit:{{ material.unit }}</span>
 	<span>Quantity:{{ material.quantity }}</span>
 	<br/>
 	
 {% endfor %}
 <br/>
-{% for unit in units %}
-	<span>{{ unit.unit }}</span>
-	<br/>
-{% endfor %}
