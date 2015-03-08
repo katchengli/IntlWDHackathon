@@ -10,7 +10,12 @@ from django.http import HttpResponseRedirect
 def index(request):
 	unit = Unit.objects.all()
 	material = Material.objects.all()
-	return render(request, 'materials/index.html', {'material': material, 'unit': unit})
+    
+	print("@@@@@@@@@@@@@@@@@@@@@@@@")
+	for m in material:
+		print(m)
+    
+	return render(request, 'materials/index.html', {'materials': material, 'units': unit})
 	#return render(request, 'materials/index.html', {'unit': unit})
 
 def new(request):

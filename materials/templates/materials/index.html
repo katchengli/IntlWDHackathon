@@ -1,15 +1,15 @@
 <h1>Materials</h1>
 
-{% for material in material %}
+{% for material in materials %}
 	<span>Name:{{ material.name }}</span>
-	<span>Price:{{ material.price }}</span>
+
 	<span>Unit:{{ material.unit.unit }}</span>
 	<span>Quantity:{{ material.quantity }}</span>
 	<br/>
 	
 {% endfor %}
 <br/>
-{% for unit in unit %}
+{% for unit in units %}
 	<span>{{ unit.unit }}</span>
 	<br/>
 {% endfor %}
