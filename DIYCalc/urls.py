@@ -11,5 +11,9 @@ urlpatterns = patterns('',
     url(r'^materials/', include('materials.urls')),
     url(r'^management/', include('management.urls')),
     url(r'^home/', include('home.urls')),
+<<<<<<< HEAD
     
+=======
+    url(r'^products/', include('products.urls')),
+>>>>>>> origin/master
 )

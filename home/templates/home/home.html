@@ -1,27 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home page</title>
-    
-     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-    
-  </head>
-  <body>
-  
-  
-    <h1 class="jumbotron">Home page!</h1>
-    
-    
-    
-    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="{{ STATIC_URL }}js/jquery.js"></script>
-    
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  </body>
-</html>
+{% extends "DIYCalc/base.html" %}
+{% block content %}
+    <div class="page-header">
+        <h1>Home Page!</h1>
+    </div>
+{% endblock content %}
+{% block scripts %}
+    <script>
+        $( window ).load(function() {
+            $("#homeNavLi").addClass("active");
+        });
+    </script>
+{% endblock scripts %}

@@ -10,13 +10,11 @@ from django.http import HttpResponseRedirect
 def index(request):
     # unit = Unit.objects.all()
     material = Material.objects.all()
-    
-    print("@@@@@@@@@@@@@@@@@@@@@@@@")
-    for m in material:
-        print(m)
+
     
     return render(request, 'materials/index.html', {'materials': material})
     #return render(request, 'materials/index.html', {'unit': unit})
+
 
 # def new(request):
 # if this is a POST request we need to process the form data
