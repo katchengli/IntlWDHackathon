@@ -7,11 +7,11 @@ from django.http import HttpResponseRedirect
     # model = Unit
     # fields = ['name']
 
-def index(request):
+def management(request):
     unit = Unit.objects.all()
     
     
-    return render(request, 'management/index.html', {'units': unit})
+    return render(request, 'management/management.html', {'units': unit})
     #return render(request, 'materials/index.html', {'unit': unit})
 
 # def new(request):
