@@ -1,5 +1,4 @@
 from django.db import models
-from django.forms import Form
 
 class Material(models.Model):
     name=models.CharField(max_length=200)
@@ -17,7 +16,5 @@ class Category(models.Model):
     
     def __str__(self): 
         return self.category
-
-
 
 
